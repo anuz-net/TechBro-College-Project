@@ -16,7 +16,7 @@
     <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body class="bg-gray-900">
+<body class="bg-white text-black dark:bg-gray-900 dark:text-white">
     <!-- Navbar -->
     <nav class="bg-gray-800 border-b border-gray-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,7 +33,7 @@
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
                         <a href="#"
-                            class="text-white hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200">Mobile</a>
+                            class="text-white hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200">Home</a>
                         <a href="#"
                             class="text-gray-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200">Accessories</a>
                         <a href="#"
@@ -66,7 +66,7 @@
                 <div class="hidden md:block">
                     <div class="ml-4 flex items-center space-x-4">
                         <!-- Wishlist Icon -->
-                        <button class="text-gray-300 hover:text-cyan-400 transition-colors duration-200">
+                        <button class="text-gray-300  hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
@@ -75,7 +75,7 @@
                         </button>
 
                         <!-- Cart Icon -->
-                        <button class="text-gray-300 hover:text-cyan-400 transition-colors duration-200">
+                        <button class="text-gray-300  hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.293 2.293c-.63.63-.184 1.707.707 1.707H19M7 13v4a2 2 0 002 2h8a2 2 0 002-2v-4m-8 2h.01M15 15h.01">
@@ -84,7 +84,7 @@
                         </button>
 
                         <!-- Notification Icon with Badge -->
-                        <button class="text-gray-300 hover:text-cyan-400 transition-colors duration-200 relative">
+                        <button class="text-gray-300  hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
@@ -92,6 +92,11 @@
                             </svg>
                             <span class="absolute -top-1 -right-1 h-3 w-3 bg-red-500 rounded-full"></span>
                         </button>
+                        <button id="theme-toggle" type="button" onclick="toggleTheme()" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+</button>
+
                     </div>
                 </div>
 
@@ -124,32 +129,30 @@
     </nav>
     <!-- // Image section -->
     <section class="Main-Top">
-        <div class="w-full h-80 bg-blue-300 flex">
+        <div class="w-full h-80 flex p-5 border-b border-gray-700 sm:h-100">
             <div class="w-1/2 h-full flex items-center justify-around">
                 <div class="left-side ">
-                    <div class="text-white mb-[50px]">
+                    <div class="text-white mb-[10px]">
                         <h2 class="text-5xl font-bold">Elevate Your <br> Technology</h2>
+                    </div>
+                    <div class="text-white mb-[50px]">
+                        <p>All in one Tech Products <br>
+                            Tech Products on the way</p>
                     </div>
                     <div class="betons">
                         <button
-                            class="btn bg-blue-600 text-white p-3 rounded-2xl hover:bg-blue-800 focus:ring-4 focus:ring-blue-400 flex items-center justify-around shadow-lg transition">Shop
+                            class="btn bg-blue-600 text-white p-3 rounded-[5px] hover:bg-blue-800 focus:ring-4 focus:ring-blue-400 flex items-center justify-around shadow-lg hover:shadow-blue-500/50 transition">Shop
                             Now</button>
-
                     </div>
                 </div>
             </div>
-            <div class=" w-1/2 h-full flex items-center justify-center">
-
+            <div class=" w-1/2 h-full flex items-center justify-center ">
+                <img src="images/PractiseAsset 2@3x.png" alt="" class="w-[500px] h-[300px] object-cover hidden md:block p-3">
             </div>
         </div>
     </section>
-    <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+    <script src="script.js">
+
     </script>
 
 
@@ -157,6 +160,11 @@
     </div>
     </nav>
     </section>
+
+    <section class="crousal">
+
+    </section>
 </body>
+
 
 </html>
